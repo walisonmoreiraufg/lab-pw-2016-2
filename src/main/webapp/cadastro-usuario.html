@@ -14,17 +14,23 @@ form {
 </style>
 
 <script type="text/javascript">
-
+function gerarSenha() {
+	var formulario = document.forms["cadastroUsuario"]
+	var campoSenha = formulario.elements["senha"];
+	campoSenha.value = "12345678";
+}
 </script>
 
 </head>
 <body>
   <h1>Cadastro de Usuário</h1>
-  <form method="post">
+  <form name="cadastroUsuario" method="post">
   Nome: <input type="text" name="nome" style="background-color: lime;"><br>
-  Senha: <input type="password" name="senha"><br>
+  Senha: <input type="text" name="senha"><br>
   <button type="button">Salvar</button>
   <input type="submit" value="Excluir">
+  <input type="button" value="Gerar senha"
+    onclick="gerarSenha();">
   </form>
 </body>
 </html>
