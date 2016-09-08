@@ -10,7 +10,6 @@
 //Scriptlet.
 
 out.print(new java.util.Date());
-
 %>
   <h1>Cálculo Menor/Maior</h1>
   <form>
