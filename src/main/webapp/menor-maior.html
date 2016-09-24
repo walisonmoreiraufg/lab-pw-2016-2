@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cálculo Menor/Maior JavaScript</title>
+<script>
+function calcular() {
+  var idade = window.document.forms[0].elements["idade"].value;
+  if (idade < 18) {
+    alert("Menor");
+  } else {
+    alert("Maior");
+  }
+}
+</script>
+</head>
+<body>
+  <h1>Cálculo Menor/Maior JavaScript</h1>
+  <form>
+    Idade: <input name="idade" type="text">
+    <button type="button" onclick="calcular()">Calcular</button>
+  </form>
+</body>
+</html>
