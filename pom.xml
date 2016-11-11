@@ -28,6 +28,17 @@
       <version>3.1.0</version>
       <scope>provided</scope>
     </dependency>
+    <!-- Para trabalhar com JDBC e H2 -->
+<!--     <dependency> -->
+<!--       <groupId>com.h2database</groupId> -->
+<!--       <artifactId>h2</artifactId> -->
+<!--       <version>1.4.193</version> -->
+<!--     </dependency> -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.30</version>
+    </dependency>
   </dependencies>
 
   <build>
