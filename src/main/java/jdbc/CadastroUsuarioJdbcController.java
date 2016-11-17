@@ -1,6 +1,7 @@
 package jdbc;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,16 +23,22 @@ public class CadastroUsuarioJdbcController extends HttpServlet {
     usuario.setCodigo(req.getParameter("codigo"));
     usuario.setNome(req.getParameter("nome"));
     usuario.setSenha(req.getParameter("senha"));
-    
+
+    List<Usuario> usuarios = null;
     try {
       if (op.equals("Salvar")) {
         CadastroUsuarioJdbcModel.salvar(usuario);
       } else if (op.equals("Excluir")) {
         CadastroUsuarioJdbcModel.excluir(usuario);
       }
+
+      usuarios = CadastroUsuarioJdbcModel.listar();
+
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }
+    
+    req.setAttribute("usuarios", usuarios);
 
     //Chamando o JSP.
     String nextJsp = "/cadastro-usuario-jdbc.jsp";
