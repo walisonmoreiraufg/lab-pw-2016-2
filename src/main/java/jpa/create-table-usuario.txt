@@ -1,0 +1,6 @@
+CREATE TABLE usuario (
+  codigo int(6) unsigned NOT NULL AUTO_INCREMENT,
+  nome varchar(30) NOT NULL,
+  senha varchar(30),
+  PRIMARY KEY (codigo)
+);
