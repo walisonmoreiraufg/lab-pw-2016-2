@@ -39,6 +39,12 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.30</version>
     </dependency>
+    <!-- Para usar JPA com Hibernate. -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>4.3.1.Final</version>
+    </dependency>
   </dependencies>
 
   <build>
