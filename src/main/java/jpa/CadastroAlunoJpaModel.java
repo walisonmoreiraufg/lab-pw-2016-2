@@ -19,8 +19,15 @@ public class CadastroAlunoJpaModel {
   public static void salvar(Aluno aluno) throws SQLException {
     EntityManager em = obterConexao();
     em.getTransaction().begin();
-    em.merge(aluno);
-    em.getTransaction().commit();
+    try {
+      //Mudanças no banco de dados.
+      em.merge(aluno);
+      //...
+
+      em.getTransaction().commit();
+    } catch (Throwable e) {
+      em.getTransaction().rollback();
+    }
   }
 
 
