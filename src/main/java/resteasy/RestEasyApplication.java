@@ -5,6 +5,8 @@ import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
+import rest.MenorMaiorJaxRs;
+
 @ApplicationPath("/api")
 public class RestEasyApplication extends Application {
 
@@ -17,6 +19,7 @@ public class RestEasyApplication extends Application {
   
   public RestEasyApplication() {
     singletons.add(new AlunoController());
+    singletons.add(new MenorMaiorJaxRs());
   }
   
 }
